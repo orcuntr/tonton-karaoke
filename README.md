@@ -8,7 +8,7 @@ AI destekli ton analizi ile kişiye özel karaoke deneyimi.
 
 ## 🌟 Özellikler
 
-- 🎤 **AI Ton Analizi** - Sesini analiz ediyor, senin için en uygun tonu buluyor
+- 🎤 **Ton Analizi** - Sesini analiz ediyor, senin için en uygun tonu buluyor
 - 🎼 **Akıllı Transpozisyon** - Her şarkıyı senin sesine uyarlıyor
 - 📊 **Gelişim Takibi** - Performansını kaydet, gelişimini izle
 - 🏆 **Sosyal Yarışmalar** - Arkadaşlarınla challenge yap, seviye atla
