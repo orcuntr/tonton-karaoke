@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>TonTon Karaoke - Sesini Keşfet, Yeteneğini Geliştir 🎤</title>
+    <meta name="description" content="AI destekli ton analizi ile kişiye özel karaoke deneyimi. Sesini keşfet, yetenğini geliştir!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_mobile_optimized.css">
+</head>
+<body>
+    <!-- Neon Background -->
+    <div class="neon-background">
+        <div class="neon-circle neon-pink"></div>
+        <div class="neon-circle neon-cyan"></div>
+        <div class="neon-circle neon-orange"></div>
+        <div class="neon-circle neon-coral"></div>
+        <div class="neon-circle neon-lime"></div>
+    </div>
+
+    <!-- Sticky Mobile CTA Bar (Bottom) -->
+    <div class="mobile-sticky-cta" id="stickyBar">
+        <button class="neon-button neon-button-pink neon-button-pulse" onclick="scrollToBeta()">
+            <span class="button-content">
+                <span class="button-icon">🎤</span>
+                <span>Beta'ya Katıl</span>
+            </span>
+            <span class="button-glow"></span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container-fluid">
+            <div class="nav-wrapper">
+                <div class="logo-wrapper">
+                    <img src="Logo_Gif_Canlı.gif" alt="TonTon Karaoke" class="logo-gif">
+                </div>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menü">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#ozellikler" class="nav-link">Özellikler</a>
+                    <a href="#nasil-calisir" class="nav-link">Nasıl Çalışır?</a>
+                    <a href="#testimonials" class="nav-link">Kullanıcılar</a>
+                    <a href="#beta" class="btn-nav neon-button neon-button-cyan">
+                        <span>Beta'ya Katıl</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Mobile Optimized -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                
+                <!-- Logo (Büyük, Merkezde) -->
+                <div class="hero-logo">
+                    <img src="Logo_Gif_Canlı.gif" alt="TonTon Karaoke Logo" class="hero-logo-img">
+                </div>
+
+                <!-- Badges -->
+                <div class="hero-badges">
+                    <span class="neon-badge neon-badge-orange pulse">
+                        <span class="badge-glow"></span>
+                        YAPIM AŞAMASINDA
+                    </span>
+                    <span class="neon-badge neon-badge-cyan pulse">
+                        <span class="badge-glow"></span>
+                        PATENTLİ TEKNOLOJİ
+                    </span>
+                </div>
+
+                <!-- Main Value Prop -->
+                <h1 class="hero-title">
+                    <span class="title-line">Sesini Keşfet</span>
+                    <span class="title-line neon-gradient-text">Yeteneğini Geliştir</span>
+                </h1>
+
+                <!-- Sub Heading -->
+                <p class="hero-subtitle">
+                    <span class="highlight-pink">AI destekli ton analizi</span> ile 
+                    kişiye özel karaoke deneyimi. 
+                    Her şarkıyı <span class="highlight-cyan">senin sesine</span> uyarla!
+                </p>
+
+                <!-- Primary CTA -->
+                <div class="hero-cta-primary">
+                    <a href="#beta" class="neon-button neon-button-large neon-button-pink cta-primary">
+                        <span class="button-content">
+                            <span class="button-icon">🚀</span>
+                            <span class="button-text">
+                                <strong>Beta'ya Katıl</strong>
+                                <small>Erken erişim avantajları</small>
+                            </span>
+                        </span>
+                        <span class="button-glow"></span>
+                    </a>
+                </div>
+
+                <!-- Social Proof Quick Stats -->
+                <div class="hero-stats-mini">
+                    <div class="stat-mini">
+                        <span class="stat-mini-number neon-text">248+</span>
+                        <span class="stat-mini-label">Beta Bekleyenler</span>
+                    </div>
+                    <div class="stat-mini-divider"></div>
+                    <div class="stat-mini">
+                        <span class="stat-mini-number" style="color: var(--neon-orange)">⭐ 4.9</span>
+                        <span class="stat-mini-label">Erken Kullanıcı Puanı</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-hint">
+                    <span>Kaydır</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-badge neon-badge neon-badge-pink">
+                <span class="badge-glow"></span>
+                KULLANICILARIMIZ DİYOR
+            </div>
+            
+            <h2 class="section-title">
+                <span class="neon-gradient-text">Seslerini</span> Keşfedenler
+            </h2>
+
+            <!-- Testimonial Cards - Swipeable on Mobile -->
+            <div class="testimonials-scroll">
+                <div class="testimonial-card neon-card">
+                    <div class="card-glow"></div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Sesimin bu kadar güzel çıkabileceğini bilmiyordum! 
+                        AI ton analizi sayesinde en rahat söyleyebildiğim tonları keşfettim."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <strong>Ayşe S.</strong>
+                            <span>Beta Kullanıcısı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card neon-card">
+                    <div class="card-glow"></div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Şarkı söylerken sürekli tonumu kaybediyordum. 
+                        TonTon'un gerçek zamanlı transpozisyonu hayat kurtarıcı!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: var(--neon-cyan)">MK</div>
+                        <div class="author-info">
+                            <strong>Mehmet K.</strong>
+                            <span>Beta Kullanıcısı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card neon-card">
+                    <div class="card-glow"></div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Arkadaşlarımla challenge yapıyoruz. 
+                        Gelişim takibi özelliği beni çok motive ediyor! 🔥"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: var(--neon-orange)">ZY</div>
+                        <div class="author-info">
+                            <strong>Zeynep Y.</strong>
+                            <span>Beta Kullanıcısı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Hint for Mobile -->
+            <div class="scroll-hint-horizontal">
+                <span>Kaydırın →</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works - Interactive -->
+    <section id="nasil-calisir" class="how-it-works-section">
+        <div class="container">
+            <div class="section-badge neon-badge neon-badge-cyan">
+                <span class="badge-glow"></span>
+                NASIL ÇALIŞIR?
+            </div>
+
+            <h2 class="section-title">
+                <span class="neon-gradient-text">3 Adımda</span> Başla
+            </h2>
+
+            <!-- Swipeable Steps -->
+            <div class="steps-container">
+                <div class="step-card neon-card active" data-step="1">
+                    <div class="card-glow"></div>
+                    <div class="step-number">1</div>
+                    <div class="step-icon">🎵</div>
+                    <h3>Şarkını Seç</h3>
+                    <p>Binlerce şarkı arasından favorini seç. 
+                    Pop, rock, türkü - her tarz var!</p>
+                </div>
+
+                <div class="step-card neon-card" data-step="2">
+                    <div class="card-glow"></div>
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🎤</div>
+                    <h3>AI Analiz Etsin</h3>
+                    <p>Sesini analiz ediyor, senin için en uygun tonu otomatik buluyor.</p>
+                </div>
+
+                <div class="step-card neon-card" data-step="3">
+                    <div class="card-glow"></div>
+                    <div class="step-number">3</div>
+                    <div class="step-icon">⭐</div>
+                    <h3>Söyle & Geliş</h3>
+                    <p>Performansını kaydet, gelişimini takip et, arkadaşlarınla yarış!</p>
+                </div>
+            </div>
+
+            <!-- Step Navigation Dots -->
+            <div class="step-dots">
+                <span class="dot active" data-step="1"></span>
+                <span class="dot" data-step="2"></span>
+                <span class="dot" data-step="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features - Mobile Optimized -->
+    <section id="ozellikler" class="features-section">
+        <div class="container">
+            <div class="section-badge neon-badge neon-badge-orange">
+                <span class="badge-glow"></span>
+                ÖZELLİKLER
+            </div>
+
+            <h2 class="section-title">
+                <span class="neon-gradient-text">Neden</span> TonTon?
+            </h2>
+
+            <div class="features-grid-mobile">
+                <!-- Feature 1 -->
+                <div class="feature-card-mobile neon-card" data-color="pink">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-large">
+                        <div class="feature-icon">🎤</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>AI Ton Analizi</h3>
+                    <p>
+                        Yapay zeka sesini analiz ediyor, 
+                        vokal aralığını tespit ediyor ve 
+                        sana özel şarkı önerileri sunuyor.
+                    </p>
+                    <div class="feature-tag">Patentli Teknoloji</div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card-mobile neon-card" data-color="cyan">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-large">
+                        <div class="feature-icon">🎼</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Akıllı Transpozisyon</h3>
+                    <p>
+                        Her şarkıyı senin sesine uyarlıyoruz. 
+                        Gerçek zamanlı ton ayarı ile rahatça söyle!
+                    </p>
+                    <div class="feature-tag">Gerçek Zamanlı</div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card-mobile neon-card" data-color="orange">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-large">
+                        <div class="feature-icon">📊</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Gelişim Takibi</h3>
+                    <p>
+                        Performansını kaydet, vokal gelişimini analiz et, 
+                        seviye atla ve ödüller kazan!
+                    </p>
+                    <div class="feature-tag">Gamification</div>
+                </div>
+
+                <!-- Feature 4 - NEW -->
+                <div class="feature-card-mobile neon-card" data-color="lime">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-large">
+                        <div class="feature-icon">🏆</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Sosyal Yarışmalar</h3>
+                    <p>
+                        Arkadaşlarınla challenge'lar oluştur, 
+                        lider tablosunda yüksel, rozetler kazan!
+                    </p>
+                    <div class="feature-tag">Yakında</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beta Program - FOMO + Conversion -->
+    <section id="beta" class="beta-section-mobile">
+        <div class="container">
+            <div class="beta-wrapper-mobile neon-card">
+                <div class="card-glow"></div>
+
+                <!-- Beta Header -->
+                <div class="beta-header-mobile">
+                    <div class="beta-icon">🎉</div>
+                    <h2>
+                        <span class="neon-gradient-text">Beta Programı</span>
+                    </h2>
+                    <p class="beta-subtitle">
+                        İlk kullanıcılardan ol, özel avantajları kaçırma!
+                    </p>
+                </div>
+
+                <!-- FOMO Counter -->
+                <div class="beta-countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number neon-text" id="betaCount">248</span>
+                        <span class="countdown-label">Kişi Bekliyor</span>
+                    </div>
+                    <div class="countdown-live">
+                        <span class="live-dot"></span>
+                        <span>Canlı</span>
+                    </div>
+                </div>
+
+                <!-- Beta Benefits -->
+                <div class="beta-benefits">
+                    <h3>Beta Avantajları:</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✨</span>
+                            <span>Lifetime ücretsiz premium erişim</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🏅</span>
+                            <span>Özel "Beta Pioneer" rozeti</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎯</span>
+                            <span>Ürün kararlarında öncelikli söz hakkı</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎁</span>
+                            <span>İlk 500 kullanıcıya özel hediye paketi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beta Form - Mobile Optimized -->
+                <div class="beta-form-mobile">
+                    <h3>Hızlı Kayıt</h3>
+                    <p class="form-subtitle">1 dakika içinde katıl!</p>
+
+                    <form class="signup-form" id="betaForm">
+                        <!-- Phone Number Input (Primary) -->
+                        <div class="form-group-mobile">
+                            <label for="phone">📱 Telefon Numaran</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">+90</span>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="5XX XXX XX XX"
+                                    pattern="[0-9]{10}"
+                                    required
+                                >
+                            </div>
+                            <small class="input-hint">SMS ile hızlı onay</small>
+                        </div>
+
+                        <!-- Name Input -->
+                        <div class="form-group-mobile">
+                            <label for="name">👤 Adın Soyadın</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Ahmet Yılmaz"
+                                required
+                            >
+                        </div>
+
+                        <!-- Email Input (Secondary) -->
+                        <div class="form-group-mobile">
+                            <label for="email">✉️ E-posta (opsiyonel)</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="ornek@email.com"
+                            >
+                            <small class="input-hint">Güncellemeler için</small>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="neon-button neon-button-large neon-button-pink neon-button-full">
+                            <span class="button-content">
+                                <span class="button-icon">🚀</span>
+                                <span>Beta'ya Katıl</span>
+                            </span>
+                            <span class="button-glow"></span>
+                        </button>
+
+                        <p class="form-privacy">
+                            Kaydolarak <a href="#">gizlilik politikasını</a> kabul etmiş olursunuz.
+                        </p>
+                    </form>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-icon">🎉</div>
+                        <h3>Hoş Geldin!</h3>
+                        <p>Beta bekleme listesine eklendi. Yakında seninle iletişime geçeceğiz!</p>
+                        <div class="success-stats">
+                            <p>Sıradaki numaran: <strong class="neon-text">#249</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-badge neon-badge neon-badge-lime">
+                <span class="badge-glow"></span>
+                SSS
+            </div>
+
+            <h2 class="section-title">
+                Sık Sorulan <span class="neon-gradient-text">Sorular</span>
+            </h2>
+
+            <div class="faq-list">
+                <div class="faq-item neon-card">
+                    <div class="card-glow"></div>
+                    <button class="faq-question">
+                        <span>TonTon Karaoke nasıl çalışıyor?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            TonTon, yapay zeka destekli ton analizi ile sesini analiz ediyor ve 
+                            her şarkıyı senin vokal aralığına uyarlıyor. Böylece her şarkıyı 
+                            rahatça söyleyebilirsin!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item neon-card">
+                    <div class="card-glow"></div>
+                    <button class="faq-question">
+                        <span>Beta programı ne zaman başlıyor?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Beta programımız Ocak 2025'te başlayacak. 
+                            Şimdi kayıt olursan öncelikli erişim hakkı kazanırsın!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item neon-card">
+                    <div class="card-glow"></div>
+                    <button class="faq-question">
+                        <span>Ücretli mi olacak?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Beta kullanıcılarımıza lifetime ücretsiz premium erişim veriyoruz! 
+                            Beta sonrası da sınırlı ücretsiz plan olacak.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item neon-card">
+                    <div class="card-glow"></div>
+                    <button class="faq-question">
+                        <span>Hangi cihazlarda çalışacak?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            iOS (iPhone, iPad) ve Android (telefon, tablet) cihazlarda çalışacak. 
+                            Web versiyonu da gelecek!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Mobile Optimized -->
+    <footer class="footer-mobile">
+        <div class="container">
+            <!-- Footer Logo -->
+            <div class="footer-logo-section">
+                <img src="Logo_Gif_Canlı.gif" alt="TonTon Karaoke" class="footer-logo">
+                <p class="footer-tagline">Sesini keşfet, yeteneğini geliştir 🎤</p>
+            </div>
+
+            <!-- Footer CTA -->
+            <div class="footer-cta">
+                <a href="#beta" class="neon-button neon-button-cyan">
+                    <span class="button-content">
+                        <span>Beta'ya Katıl</span>
+                    </span>
+                    <span class="button-glow"></span>
+                </a>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links-mobile">
+                <div class="footer-column">
+                    <h4>Ürün</h4>
+                    <a href="#ozellikler">Özellikler</a>
+                    <a href="#nasil-calisir">Nasıl Çalışır?</a>
+                    <a href="#beta">Beta Programı</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Şirket</h4>
+                    <a href="#hakkimizda">Hakkımızda</a>
+                    <a href="#iletisim">İletişim</a>
+                    <a href="#">Kariyer</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Yasal</h4>
+                    <a href="#">Gizlilik</a>
+                    <a href="#">Şartlar</a>
+                    <a href="#">KVKK</a>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="TikTok">
+                    <span style="font-size: 20px;">🎵</span>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <span style="font-size: 20px;">▶️</span>
+                </a>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom-mobile">
+                <p>&copy; 2024 TonTon Karaoke. Tüm hakları saklıdır.</p>
+                <p class="footer-note">⚡ Patentli teknoloji ile korunmaktadır</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script_mobile_optimized.js"></script>
+</body>
+</html>
